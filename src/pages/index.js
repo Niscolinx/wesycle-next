@@ -15,11 +15,11 @@ const App = () => {
 
 
     const addProductToCart = productId => {
-        console.log('Hello world')
+        console.log('Just added the product to cart!!', productId)
     }
 
     const removeProductFromCart = productId => {
-        console.log("Just added the product to cart!!")
+        console.log('Removed product from cart', productId)
     }
 
     return (
