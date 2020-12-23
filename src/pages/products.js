@@ -13,14 +13,15 @@ const Products = () => {
                             <div key={item + i}>
                                 <p>{item.title} is {item.price}</p>
                                 <button
-                                    onClick={context.addProductToCart(item)}
+                                    style={{cursor: 'pointer'}}
+                                    onClick={context.addProductToCart()}
                                 >
                                     Add to Cart
                                 </button>
                             </div>
                         )
                     })}
-                </button>
+                </>
             )}
         </ShopContext.Consumer>
     )
