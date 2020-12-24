@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import LinkProps from 'next/link'
 import ShopContext from '../context/shop-context'
 
 const Products = () => {
@@ -23,6 +24,8 @@ const Products = () => {
                     </button>
                 </div>
             ))}
+
+            <h2><LinkProps href='/'>Go back to home</LinkProps></h2>
         </>
     )
 }

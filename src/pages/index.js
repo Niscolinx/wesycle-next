@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react'
+import LinkProps from 'next/link'
 import GlobalState from '../context/globalState'
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
                     Welcome to the main app, in a short while, it will be
                     changed!
                 </h1>
+                <h2>Go to the Products page by clicking <LinkProps href='/products'>here</LinkProps></h2>
             </div>
         </GlobalState>
     )

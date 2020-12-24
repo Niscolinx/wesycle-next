@@ -1,3 +1,4 @@
+import React, {useState, useReducer} from 'react'
 import { shopReducer, ADD_PRODUCT, REMOVE_PRODUCT } from '../context/reducer'
 import ShopContext from '../context/shop-context'
 
@@ -12,6 +13,7 @@ const GlobalState = (props) => {
         cart: [],
     })
 
+    
     const [cartState, dispatch] = useReducer(shopReducer, { cart: [] })
 
     const addProductToCart = (product) => {
@@ -35,7 +37,7 @@ const GlobalState = (props) => {
                 removeProductFromCart,
             }}
         >
-            props.children
+            {props.children}
         </ShopContext.Provider>
     )
 }
