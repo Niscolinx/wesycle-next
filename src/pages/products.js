@@ -11,10 +11,13 @@ const Products = () => {
                     {context.products.map((item, i) => {
                         return (
                             <div key={item + i}>
-                                <p>{item.title} is {item.price}</p>
+                                <p>
+                                    <strong>{item.title}</strong> is{' '}
+                                    {item.price}
+                                </p>
                                 <button
-                                    style={{cursor: 'pointer'}}
-                                    onClick={context.addProductToCart()}
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={context.addProductToCart(item.id)}
                                 >
                                     Add to Cart
                                 </button>
