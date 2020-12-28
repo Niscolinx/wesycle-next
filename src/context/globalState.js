@@ -20,7 +20,7 @@ const GlobalState = (props) => {
     }
 
     const removeProductFromCart = (productId) => {
-        console.log('Removed product from cartt', productId)
+        console.log('Removed the product from cart', productId)
 
         dispatch({ type: REMOVE_PRODUCT, productId })
     }
