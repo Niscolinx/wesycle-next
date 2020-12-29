@@ -14,7 +14,7 @@ const GlobalState = (props) => {
     const [cartState, dispatch] = useReducer(shopReducer, {cart: []})
 
     const addProductToCart = (product) => {
-        console.log('Just added the product to cart!!', product)
+        console.log('Just added the product to cart!', product)
 
       //  dispatch({ type: ADD_PRODUCT, product })
     }
