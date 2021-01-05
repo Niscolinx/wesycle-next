@@ -26,7 +26,7 @@ const Products = () => {
                             context.removeProductFromCart.bind(this, item)
                         }
                     >
-                        Add to Cart
+                        Add to Cart!
                     </button>
                 </div>
             ))}
