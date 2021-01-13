@@ -30,7 +30,7 @@ const App = () => {
                                 fontSize: '1.6rem',
                             }}
                             onClick={
-                                () => context.addProductToCart()
+                                 context.addProductToCart()
                             }
                         >
                             Add to Cart
