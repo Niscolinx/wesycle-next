@@ -4,6 +4,9 @@ import ShopContext from '../context/shop-context'
 
 const Products = () => {
     const context = useContext(ShopContext)
+    const [invest, setInvest] = useState(0)
+    const [showTotal, setShowTotal] = useState(0)
+    const [showMonthly, setShowMonthly] = useState([])
 
     const inputInvestHandler = (e) => {
         setInvest(e.target.value)
@@ -15,7 +18,8 @@ const Products = () => {
         const percent = 0.5
         let profitMargin = invest * percent
 
-        let monthlyTotal = Math.floor(Number(profitMargin)) + Math.floor(Number(invest))
+        let monthlyTotal =
+            Math.floor(Number(profitMargin)) + Math.floor(Number(invest))
 
         let monthlyReturn = []
         let yearlyReturn = 0
@@ -24,7 +28,9 @@ const Products = () => {
             monthlyReturn.push(monthlyTotal)
 
             const gainMargin = monthlyTotal * percent
-            monthlyTotal = Math.floor(Number(monthlyTotal)) + Math.floor(Number(gainMargin))
+            monthlyTotal =
+                Math.floor(Number(monthlyTotal)) +
+                Math.floor(Number(gainMargin))
 
             console.log('final monthly total', monthlyTotal)
         }
