@@ -30,6 +30,66 @@ const Products = () => {
                     </button>
                 </div>
             ))}
+             <div
+                                    style={{
+                                        display: 'grid',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        margin: '0 25rem',
+                                    }}
+                                >
+                                    {showMonthly.map((item, i) => {
+                                        return (
+                                            <li
+                                                key={item}
+                                                style={{ fontSize: '1.5rem' }}
+                                            >
+                                                After month {i + 1} ={' '}
+                                                <span
+                                                    style={{
+                                                        fontSize: '2.5rem',
+                                                        fontWeight: 'bold',
+                                                    }}
+                                                >
+                                                    N{item.toLocaleString()}
+                                                </span>
+                                            </li>
+                                        )
+                                    })}
+                                    <h1
+                                        style={{
+                                            textAlign: 'center',
+                                            fontWeight: 'bold',
+                                            fontSize: '3rem',
+                                            margin: '3rem 0',
+                                        }}
+                                    >
+                                        N{showTotal.toLocaleString()}
+                                    </h1>
+                                    <form onSubmit={investHandler}>
+                                        <input
+                                            style={{
+                                                background: 'white',
+                                                height: '5rem',
+                                                fontSize: '3rem',
+                                                padding: '1rem',
+                                            }}
+                                            type='number'
+                                            onChange={inputInvestHandler}
+                                            value={invest}
+                                        />
+                                        <button
+                                            style={{
+                                                fontSize: '2rem',
+                                                textAlign: 'center',
+                                                padding: '1rem',
+                                                cursor: 'pointer',
+                                            }}
+                                        >
+                                            Submit
+                                        </button>
+                                    </form> 
+                                </div>
         </>
     )
 }
