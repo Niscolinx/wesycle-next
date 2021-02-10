@@ -9,6 +9,7 @@ const Products = () => {
     const [showMonthly, setShowMonthly] = useState([])
 
     const inputInvestHandler = (e) => {
+        console.log('input handler', e)
         setInvest(e.target.value)
     }
 
