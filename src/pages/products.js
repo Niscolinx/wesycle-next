@@ -33,7 +33,7 @@ const Products = () => {
                 Math.floor(Number(monthlyTotal)) +
                 Math.floor(Number(gainMargin))
 
-            console.log('final monthly total!!', monthlyTotal)
+            console.log('final monthly total!', monthlyTotal)
         }
 
         // const year =12
